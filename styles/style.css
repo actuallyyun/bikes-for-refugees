@@ -5,13 +5,13 @@
  * 
  */
 
- :root {
-   --grey-dark: #292b2c;
-   --grey-light: #e4e4e4;
-   --orange-dark: #c05326;
-   --orange-light: #f7eae4;
-   --white: #fff;
- }
+:root {
+  --grey-dark: #292b2c;
+  --grey-light: #e4e4e4;
+  --orange-dark: #c05326;
+  --orange-light: #f7eae4;
+  --white: #fff;
+}
 
 body {
   margin: 0;
@@ -22,9 +22,15 @@ button {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   color: var(--grey-dark);
   font-size: 1rem;
+
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -63,10 +69,12 @@ p {
 .navigation__list {
   display: flex;
   list-style: none;
+  padding: 1rem;
 }
 
 .navigation__item {
-  padding: 0.5rem 0;
+  padding: 1rem 0.5rem;
+  margin: 0.2rem;
 }
 
 .navigation__link {
@@ -74,7 +82,14 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
+  border: 1px solid transparent;
+  padding: 0.2rem 0.5rem;
 }
+
+.navigation__link:hover {
+  border: 1px solid transparent;
+}
+
 
 
 /* Text styles */
@@ -95,7 +110,31 @@ p {
 
 /* Buttons */
 
-  /* INSERT BUTTON STYLES HERE */
+/* INSERT BUTTON STYLES HERE */
+
+button {
+  background-color: #ef7f52;
+  color: white;
+  border: none;
+  padding: 1em;
+}
+
+@media screen and (max-width:320px) {
+  button {
+    font-size: 0.8rem;
+  }
+
+}
+
+button.btn-primary {
+  background-color: white;
+  color: red;
+}
+
+.btn-primary:hover {
+  background: purple;
+}
+
 
 
 /* Content */
@@ -120,6 +159,7 @@ p {
 /* hero */
 
 .hero {
+  padding: 10px 20px;
   background-image: url("header-bike.jpg");
   background-color: var(--grey-light);
 }
@@ -128,6 +168,8 @@ p {
   margin-bottom: 1rem;
   font-size: 2.5rem;
 }
+
+
 
 .hero p {
   font-size: 1.2rem;
@@ -247,4 +289,17 @@ p {
   .main {
     padding-right: 2rem;
   }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+
+
+@media screen and (max-width:320px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
 }
